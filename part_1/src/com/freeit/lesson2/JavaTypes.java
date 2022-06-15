@@ -9,7 +9,7 @@ public class JavaTypes {
         int i = 5;      // 5
         long l = 5;     // 5
         float f = 0.5f;    // 0.7f
-        double d = 0.5;   // 0.7
+        double d = 0.5;   // 0.5
 
         // Characters
         char c = 'c';
