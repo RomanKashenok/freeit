@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson4;
 
 import java.util.Arrays;
 import java.util.List;
