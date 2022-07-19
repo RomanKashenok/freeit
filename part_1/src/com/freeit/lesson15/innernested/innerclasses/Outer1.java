@@ -26,6 +26,7 @@ public class Outer1 {
 			System.out.println(date.getTime());
 			System.out.println(Outer1.aqwe);
 			aqwe = 15;
+			System.out.println(Outer1.aqwe);
 		}
 	}
 }

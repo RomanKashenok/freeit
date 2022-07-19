@@ -4,7 +4,7 @@ public class Runner {
 	public static void main(String[] args) {
 		
 //		Outer1 o1 = new Outer1();
-//		Outer1.Inner i1 = o1.new Inner();
+//		Outer1.Inner i1 = new Outer1().new Inner();
 //		i1.method();
 
 //		Outer2 o2 = new Outer2();
