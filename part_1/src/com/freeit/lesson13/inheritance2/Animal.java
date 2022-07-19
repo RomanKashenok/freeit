@@ -1,6 +1,6 @@
 package com.freeit.lesson13.inheritance2;
 
-public class Animal {
+public abstract class Animal {
 
     String reenvironment;
 
