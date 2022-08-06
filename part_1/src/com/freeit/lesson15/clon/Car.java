@@ -1,8 +1,9 @@
 package com.freeit.lesson15.clon;
 
 import java.io.Serializable;
+import java.util.Objects;
 
-public class Car implements Cloneable, Serializable {
+public class Car implements Cloneable, Serializable, Comparable<Car> {
 
     transient int year;
     transient String brand;
@@ -44,11 +45,33 @@ public class Car implements Cloneable, Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return year == car.year && Objects.equals(brand, car.brand) && Objects.equals(model, car.model);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 9;
+        hash = 31 * hash + year;
+        hash = 31 * hash + (brand == null ? 0 : brand.hashCode());
+        hash = 31 * hash + (model == null ? 0 : model.hashCode());
+        return hash;
+    }
+
+    @Override
     public String toString() {
         return "Car{" +
                 "year=" + year +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        return this.year - o.year;
     }
 }
